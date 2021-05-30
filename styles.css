@@ -11,6 +11,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -22,7 +23,6 @@ body {
   font-size: 16px;
   font-weight: normal;
   letter-spacing: 1px;
-  scroll-behavior: smooth;
 }
 
 header {
@@ -233,6 +233,11 @@ h1.title {
   border-radius: 5px 100px 30px;
 }
 
+.about-me p {
+  margin: 1em 0;
+  text-indent: 2ch;
+}
+
 .info-basic {
   margin: 20px 0;
 }
@@ -431,9 +436,12 @@ footer .links {
   .info>.info-me {
     max-width: 90%;
     padding: 20px;
-    border-radius: 5px 60px 20px;
+    border: none;
   }
 
+  .avatar img {
+    border-radius: 5px;
+  }
   .certificate {
     display: block;
     width: 90%;
