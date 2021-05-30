@@ -166,7 +166,7 @@ h1.title {
 
 .project {
   position: relative;
-  min-width: 300px;
+  width: 300px;
   min-height: 200px;
   margin: 20px;
   padding: 10px;
