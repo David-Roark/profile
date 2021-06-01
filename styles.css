@@ -58,10 +58,6 @@ a:hover {
   width: 100%;
   height: 100%;
   background: url('images/avatar16x9.png') no-repeat center,
-    -o-linear-gradient(var(--light-blue) 20%, var(--dark) 95%);
-  background: url('images/avatar16x9.png') no-repeat center,
-    -webkit-linear-gradient(var(--light-blue) 20%, var(--dark) 95%);
-  background: url('images/avatar16x9.png') no-repeat center,
     linear-gradient(var(--light-blue) 20%, var(--dark) 95%);
   background-size: cover;
 }
@@ -158,8 +154,6 @@ h1.title {
 .projects {
   display: flex;
   align-items: center;
-  -ms-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -186,8 +180,8 @@ h1.title {
 .type-label {
   display: block;
   position: absolute;
-  top: -100px;
-  right: -200px;
+  top: 0;
+  right: 0;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 0.8em;
@@ -195,13 +189,13 @@ h1.title {
   width: 200px;
   background-color: var(--midnight-blue);
   color: var(--light);
-  transition: all 1s ease-out 0.1s;
+  transition: all 0.5s ease-out 0.1s;
+  transform: rotate(45deg) translate(25%, -25%);
 }
 
 .project:hover .type-label {
-  top: 0;
-  right: 0;
-  transform: rotate(45deg) translate(25%, -25%);
+  top: -100px;
+  right: -200px;
 }
 
 .project > a {
@@ -273,8 +267,21 @@ h1.title {
 
 .skills-over .bar {
   max-width: 100%;
-  animation: progressBar 2s ease-in-out;
-  animation-fill-mode: both;
+  -webkit-animation: progressBar 2s ease-in-out;
+          animation: progressBar 2s ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes progressBar {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+    background-color: var(--gray);
+  }
 }
 
 @keyframes progressBar {

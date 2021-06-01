@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+html {
+  --dark: #222222;
+  --light: #EFEFEF;
+  --midnight-blue: #00275E;
+  --light-blue: #6D98AB;
+  --gray: #A8B1B8;
+  --orange: #FEB729;
+}
+body {
+  font-family: sans-serif;
+}
+.title {
+  position: relative;
+  color: var(--light);
+}
+
+.title > .content {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
+.title > .bg-content {
+  position: absolute;
+  left: -10px;
+  top: -5px;
+  z-index: 0;
+  display: inline-block;
+  background-color: var(--midnight-blue);
+  color: var(--light);
+  width: 200px;
+  height: 1.5em;
+  padding: 5px 10px;
+  border-radius: 2px;
+  transform: skew(-30deg, 0);
+}
+
+header,
+.about-me,
+.skills,
+.experience,
+.courses {
+  width: 1000px;
+  padding: 30px 20px 30px 50px;
+}
+.cv-body {
+  width: 1000px;
+}
+/* HEADER */
+.cv-header {
+  background-color: var(--gray);
+  color: var(--midnight-blue);
+  font-weight: bold;
+  height: 200px;
+}
+.cv-header .name {
+  margin-top: 20px;
+  font-size: 4em;
+}
+/* ABOUT ME */
+.about-me {
+  background-color: var(--light);
+  color: var(--midnight-blue);
+
+}
+.info-me {
+  margin-top: 3em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.info {
+  width: 100%;
+}
+
+.info td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0 5px 5px 0;
+}
+.info-title {
+  font-weight:bold;
+}
+
+.summary {
+  display: flex;
+  padding: 0 30px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.avt {
+  height: 150px;
+  align-self: center;
+  border-right: 5px solid var(--light-blue);
+}
+.avt > img {
+  height: 100%;
+  width: auto;
+}
+.summary-content {
+  padding: 20px;
+  line-height: 1.5em;
+}
+
+.summary-block hr:first-child {
+  border: 2px solid var(--light-blue);
+  margin: 0 20px 10px 20px;
+}
+.summary-block hr:last-child {
+  border: 2px solid var(--light-blue);
+  margin: 10px 20px 0 20px;
+}
+/* SKILLS */
+.skills {
+  background-color: var(--light);
+}
+.group-skills {
+    margin-top: 3em;
+    width: 70%;
+}
+
+.skill-bar {
+  background-color: var(--light-blue);
+}
+
+.skill-title {
+  font-weight: bold;
+  width: 150px;
+}
+
+.skill-progress {
+  display: inline-block;
+  background-color: var(--midnight-blue);
+  text-align: right;
+  color: var(--light-blue);
+  padding: 5px;
+}
+
+/* EXPERIENCE */
+.experience {
+  background-color: var(--light);
+}
+
+.experience > h3 {
+  margin-top: 3em;
+}
+
+ul {
+  padding-left: 3ch;
+}
+
+ul li {
+  margin: 5px 0;
+}
+
+/* COURSES */
+.courses {
+  background-color: var(--light);
+}
+.courses ul {
+  margin-top: 3em;
+}
