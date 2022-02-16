@@ -15,6 +15,9 @@ html {
 body {
   font-family: sans-serif;
 }
+main, header {
+  margin: auto;
+}
 .title {
   position: relative;
   color: var(--light);
